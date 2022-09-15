@@ -1,0 +1,23 @@
+.feature-details{
+    position: relative;
+}
+.feature-section h2{
+    color: #ff8a00;
+}
+.sponsor-section{
+    position: relative;
+}
+.utilites .button-3{
+    margin-right: 1rem !important;
+}
+.amazing-feature-section{
+    position: relative;
+}
+@media (max-width: 498px) {
+    .feature-details .feature-item .feature-thumb{
+        margin: 0 auto 1.5rem;
+    }
+    .feature-details .feature-item .feature-content h4{
+        text-align: center;
+    }
+}
