@@ -20,10 +20,6 @@
 
 .timeline{
     position: relative;
-    background-image: url(./img/web3.gif);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 .timeline-container {
     display: flex;
@@ -98,6 +94,7 @@
   }
   .timeline-container .vertical-scrollable-timeline li .icon-holder img {
     width: 72%;
+    border-radius: 50%;
   }
   .timeline-container .vertical-scrollable-timeline li::before {
     content: "";
@@ -127,7 +124,7 @@
     margin: 0 auto;
     letter-spacing: .15em;
     animation: 
-      typing 3.5s steps(60, end),
+      typing 3.5s steps(60, end) infinite,
       blink-caret .95s step-end infinite;
   }
   
