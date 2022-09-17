@@ -57,31 +57,31 @@
   transition: 0.4s all;
 }
 
-.timeline-container .vertical-scrollable-timeline li {
+.timeline-container .vertical-scrollable-timeline .timeline-list {
   position: relative;
   padding: 20px 0px 80px 158px;
 }
 
-.timeline-container .vertical-scrollable-timeline li:last-child {
+.timeline-container .vertical-scrollable-timeline .timeline-list:last-child {
   margin-bottom: 0;
 }
 
-.timeline-container .vertical-scrollable-timeline li a {
+.timeline-container .vertical-scrollable-timeline .timeline-list a {
   margin-bottom: 2rem;
   font-weight: 600;
   color: #fff;
 }
 
-.timeline-container .vertical-scrollable-timeline li p {
+.timeline-container .vertical-scrollable-timeline .timeline-list p {
   line-height: 1.5;
   color: #fff;
 }
 
-.timeline-container .vertical-scrollable-timeline li p:last-child {
+.timeline-container .vertical-scrollable-timeline .timeline-list p:last-child {
   margin-bottom: 0;
 }
 
-.timeline-container .vertical-scrollable-timeline li .icon-holder {
+.timeline-container .vertical-scrollable-timeline .timeline-list .icon-holder {
   position: absolute;
   left: 0;
   top: 0;
@@ -96,7 +96,7 @@
   transition: 0.4s all;
 }
 
-.timeline-container .vertical-scrollable-timeline li .icon-holder::before {
+.timeline-container .vertical-scrollable-timeline .timeline-list .icon-holder::before {
   content: "";
   width: 80px;
   height: 80px;
@@ -108,12 +108,12 @@
   transition: 0.4s all;
 }
 
-.timeline-container .vertical-scrollable-timeline li .icon-holder img {
+.timeline-container .vertical-scrollable-timeline .timeline-list .icon-holder img {
   width: 72%;
   border-radius: 50%;
 }
 
-.timeline-container .vertical-scrollable-timeline li::before {
+.timeline-container .vertical-scrollable-timeline .timeline-list::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -123,17 +123,17 @@
   z-index: 0;
 }
 
-.timeline-container .vertical-scrollable-timeline li:last-child::before {
+.timeline-container .vertical-scrollable-timeline .timeline-list:last-child::before {
   width: 58px;
   left: 48px;
   background-color: black;
 }
 
-.timeline-container .vertical-scrollable-timeline li.active .icon-holder {
+.timeline-container .vertical-scrollable-timeline .timeline-list.active .icon-holder {
   background-color: #e803fc;
 }
 
-.timeline-container .vertical-scrollable-timeline li.active .icon-holder::before {
+.timeline-container .vertical-scrollable-timeline .timeline-list.active .icon-holder::before {
   background-color: #e803fc;
 }
 
@@ -145,14 +145,14 @@
   position: absolute;
   top: 30%;
   width: 100%;
+  
 }
-
-.header-body-text div {
-  width: 66%;
+.header-body .header-body-text div{
+  width: 54rem;
   margin: 0 auto;
 }
 
-.header-body .header-body-text h2 {
+.header-body .header-body-text h1 {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -162,7 +162,6 @@
   border-right: .15em solid white;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em;
   animation:
     typing 3.5s steps(20, end),
     blink-caret .95s step-end infinite;
@@ -196,42 +195,6 @@
   width: 100%;
   height: 44px;
   overflow: hidden;
-}
-
-.lists {
-  text-align: center;
-}
-
-.lists ul li {
-  background-image: linear-gradient(to bottom right, rgba(0, 142, 255, .5), rgba(128, 0, 128, .5));
-  width: 64%;
-  border-radius: 6px;
-  margin: 0 auto 2rem;
-  font-weight: 600;
-}
-
-.waviy span {
-  font-family: 'Alfa Slab One', cursive;
-  position: relative;
-  display: inline-block;
-  color: #fff;
-  text-transform: uppercase;
-  animation: waviy 1s infinite;
-  animation-delay: calc(.1s * var(--i));
-
-}
-
-@keyframes waviy {
-
-  0%,
-  40%,
-  100% {
-    transform: translateY(0)
-  }
-
-  20% {
-    transform: translateY(-20px)
-  }
 }
 
 .influencer-card {
@@ -287,6 +250,64 @@
   font-family: "ABC Diatype";
   margin-top: 5px;
 }
+ol.gradient-list {
+  height: 20rem;
+  overflow-y: auto;
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+ol.gradient-list > .gradient-list-item {
+  background: linear-gradient(to bottom right, rgba(0, 142,255,.5), rgba(128, 0, 128, .5));
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  counter-increment: gradient-counter;
+  margin-top: 1.5rem;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+}
+ol.gradient-list > .gradient-list-item::before, ol.gradient-list > .gradient-list-item::after {
+  background: linear-gradient(131deg, #eb00ff 0%, #5802e7 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  content: "";
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+ol.gradient-list > .gradient-list-item::before {
+  align-items: flex-end;
+  content: counter(gradient-counter);
+  color: #1d1f20;
+  display: flex;
+  font: 900 1.5em/1 "Montserrat";
+  justify-content: flex-end;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(58, 12, 174, 0.5);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(226, 2, 185);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(155, 0, 245);
+}
+
 @media (max-width: 756px) {
   .utilites .cola-thumb {
     text-align: center;
