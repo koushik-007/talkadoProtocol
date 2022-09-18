@@ -145,16 +145,18 @@
   position: absolute;
   top: 30%;
   width: 100%;
-  
+
 }
-.header-body .header-body-text div{
-  width: 54rem;
+
+.header-body .header-body-text div {
+  width: 635px;
   margin: 0 auto;
 }
 
-.header-body .header-body-text h1 {
+.header-body .header-body-text h2 {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 55px;
 }
 
 .typewriter {
@@ -235,21 +237,25 @@
   z-index: 7;
   transition: all .2s;
 }
-.influencer-card .card_avatar{
+
+.influencer-card .card_avatar {
   overflow: hidden;
   border-radius: 50%;
 }
-.influencer-card .text_h6{
+
+.influencer-card .text_h6 {
   font-size: 16px;
   line-height: 1.375em;
 }
-.influencer-card .card_text p{
-  color: rgba(255,255,255,.5);
+
+.influencer-card .card_text p {
+  color: rgba(255, 255, 255, .5);
   font-size: 12px;
   line-height: 18px;
   font-family: "ABC Diatype";
   margin-top: 5px;
 }
+
 ol.gradient-list {
   height: 20rem;
   overflow-y: auto;
@@ -258,8 +264,9 @@ ol.gradient-list {
   margin: 1.75rem 0;
   padding-left: 1rem;
 }
-ol.gradient-list > .gradient-list-item {
-  background: linear-gradient(to bottom right, rgba(0, 142,255,.5), rgba(128, 0, 128, .5));
+
+ol.gradient-list>.gradient-list-item {
+  background: linear-gradient(to bottom right, rgba(0, 142, 255, .5), rgba(128, 0, 128, .5));
   border-radius: 0 0.5rem 0.5rem 0.5rem;
   counter-increment: gradient-counter;
   margin-top: 1.5rem;
@@ -267,7 +274,9 @@ ol.gradient-list > .gradient-list-item {
   padding: 1rem 1rem 1rem 3rem;
   position: relative;
 }
-ol.gradient-list > .gradient-list-item::before, ol.gradient-list > .gradient-list-item::after {
+
+ol.gradient-list>.gradient-list-item::before,
+ol.gradient-list>.gradient-list-item::after {
   background: linear-gradient(131deg, #eb00ff 0%, #5802e7 100%);
   border-radius: 1rem 1rem 0 1rem;
   content: "";
@@ -278,7 +287,8 @@ ol.gradient-list > .gradient-list-item::before, ol.gradient-list > .gradient-lis
   top: -1rem;
   width: 3rem;
 }
-ol.gradient-list > .gradient-list-item::before {
+
+ol.gradient-list>.gradient-list-item::before {
   align-items: flex-end;
   content: counter(gradient-counter);
   color: #1d1f20;
@@ -288,6 +298,7 @@ ol.gradient-list > .gradient-list-item::before {
   padding: 0.125em 0.25em;
   z-index: 1;
 }
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -308,6 +319,12 @@ ol.gradient-list > .gradient-list-item::before {
   background: rgb(155, 0, 245);
 }
 
+@media (max-width: 767px) {
+  .header-body .header-body-text div {
+    width: 417px;
+  }
+}
+
 @media (max-width: 756px) {
   .utilites .cola-thumb {
     text-align: center;
@@ -325,6 +342,105 @@ ol.gradient-list > .gradient-list-item::before {
   }
 
   .feature-details .feature-item .feature-content h4 {
+    text-align: center;
+  }
+
+  .header-body .header-body-text div {
+    width: 211px;
+  }
+
+  .header-body .header-body-text div h2 {
+    font-size: 18px !important;
+    line-height: 30px;
+  }
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 2.5em 0;
+  background: linear-gradient(to bottom right, rgba(0, 142, 255, .5), rgba(128, 0, 128, .5));
+  border-radius: 6px;
+}
+
+.product__photo, .product__info {
+  width: 50%;
+}
+
+.photo-container {
+  position: relative;
+  left: -4rem;
+}
+
+.photo-container img {
+  width: 80%;
+  border-radius: 6px;
+  box-shadow: -8px 0px 25px 1px #0a5892;
+  position: relative;
+  background: linear-gradient(to right, purple, red);
+  padding: 3px;
+}
+
+
+.product__info {
+  margin-left: -30px;
+  padding: 0.8em 0;
+  text-align: justify;
+}
+
+.title h1 {
+  margin-bottom: 0.1em;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 900;
+}
+
+.description {
+  clear: left;
+  margin: 2em 0;
+}
+
+.description h3 {
+  margin-bottom: 1em;
+}
+
+.buy--btn {
+  padding: .8em 0;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  color: #fff;
+  background-color: #ff3f40;
+  box-shadow: 2px 2px 25px -7px #4c4c4c;
+  cursor: pointer;
+  width: 45%;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .product {
+    margin-top: 3rem;
+  }
+  .product__photo, .product__info {
+    width: 100%;
+  }
+  .product__info {
+    margin-left: 0px;
+    padding: 0 2rem;
+    margin-top: -30px;
+  }
+  .photo-container {
+    text-align: center;
+    left: 0rem;
+    top: -5rem;
+  }
+  .photo-container img {
+    width: 60%;
+  }
+  .title h1 {
     text-align: center;
   }
 }
