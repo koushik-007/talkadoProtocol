@@ -143,42 +143,40 @@
 
 .header-body .header-body-text {
   position: absolute;
-  top: 30%;
+  top: 25%;
   width: 100%;
 
 }
 
 .header-body .header-body-text div {
-  width: 635px;
+  width: 716px;
   margin: 0 auto;
 }
 
 .header-body .header-body-text h2 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 55px;
+  font-size: 50px;
 }
 
-.typewriter {
-  overflow: hidden;
-  border-right: .15em solid white;
-  white-space: nowrap;
-  margin: 0 auto;
-  animation:
-    typing 3.5s steps(20, end),
-    blink-caret .95s step-end infinite;
+.typewriter span {
+  text-transform: uppercase;
+  border-right: solid white 10px; 
+  animation: cursor 1s ease-in-out infinite;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
+@keyframes cursor {
+  from { border-color: var(--text-color); }
+  to { border-color: transparent; }
 }
+
+@media (max-width: 576px) {
+  .typewriter { font-size: 24px; }
+}
+@media (max-width: 768px) {
+  .typewriter { font-size: 36px; }
+}
+
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
@@ -406,6 +404,7 @@ ol.gradient-list>.gradient-list-item::before {
 }
 
 .buy--btn {
+  height: 55px;
   padding: .8em 0;
   border: none;
   border-radius: 7px;
@@ -413,13 +412,16 @@ ol.gradient-list>.gradient-list-item::before {
   font-weight: 700;
   letter-spacing: 1.3px;
   color: #fff;
-  background-color: #ff3f40;
+  background: linear-gradient(-65deg, #c165dd, #1153fc);
   box-shadow: 2px 2px 25px -7px #4c4c4c;
   cursor: pointer;
   width: 45%;
   text-align: center;
 }
-
+.buy--btn:hover{
+  border: 1px solid #cac7f6;
+  background: transparent;
+}
 @media (max-width: 992px) {
   .product {
     margin-top: 3rem;
@@ -443,4 +445,26 @@ ol.gradient-list>.gradient-list-item::before {
   .title h1 {
     text-align: center;
   }
+}
+.button-4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  padding: 15px 45px;
+  background: -ms-linear-gradient(-65deg, #c165dd 0%, #1153fc 100%);
+  background: -moz-linear-gradient(-65deg, #c165dd 0%, #1153fc 100%);
+  background: -webkit-linear-gradient(-65deg, #c165dd 0%, #1153fc 100%);
+}
+
+.button-4:hover {
+  color: #ffffff;
+  box-shadow: 0px 17px 24px 0px rgba(18, 83, 252, 0.51);
+}
+
+.button-4.active {
+  background: transparent;
+  border: 1px solid #6e5dc6;
 }
