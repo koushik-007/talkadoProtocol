@@ -349,7 +349,7 @@ ol.gradient-list>.gradient-list-item::before {
   border-radius: 6px;
   box-shadow: -8px 0px 25px 1px #0a5892;
   position: relative;
-  background: linear-gradient(to right, purple, red);
+  background: linear-gradient(-65deg, #c165dd, #1153fc);
   padding: 3px;
 }
 
@@ -473,6 +473,7 @@ ol.gradient-list>.gradient-list-item::before {
   .typewriter {
     font-size: 24px;
   }
+
   .buy--btn {
     width: 100%;
     margin-bottom: 10px;
@@ -501,4 +502,60 @@ ol.gradient-list>.gradient-list-item::before {
     width: 45px;
   }
 
+  .timeline-container .vertical-scrollable-timeline .timeline-list {
+    padding: 12px 0px 80px 126px;
+  }
+
+  .timeline-container .vertical-scrollable-timeline .timeline-list a {
+    margin-bottom: 1rem;
+  }
+
+  ol.gradient-list {
+    margin: 1.5rem 0;
+  }
+
+  ol.gradient-list>.gradient-list-item {
+    padding: 1rem;
+    font-size: 15px;
+  }
+
+  ol.gradient-list>.gradient-list-item::before {
+  
+    padding: 0.125em 0.25em;
+  }
+
+  ol.gradient-list>.gradient-list-item::before,
+  ol.gradient-list>.gradient-list-item::after {
+
+    height: 2rem;
+    left: -1rem;
+    top: -1rem;
+    width: 2rem;
+  }
+
+  ol.gradient-list>.gradient-list-item::before,
+  ol.gradient-list>.gradient-list-item::after {
+ 
+    height: 2rem;
+    left: -1rem rem;
+    top: -1rem;
+    width: 2rem;
+  }
+  .timeline-container .vertical-scrollable-timeline .timeline-list .icon-holder {
+    width: 80px;
+    height: 80px;
+  }
+  .timeline-container .vertical-scrollable-timeline .list-progress {
+    left: 37px;
+  }
+  .timeline-container .vertical-scrollable-timeline .timeline-list .icon-holder::before {
+    width: 60px;
+    height: 60px;
+  }
+  .timeline-container .vertical-scrollable-timeline .timeline-list .icon-holder img {
+    width: 70%;
+  }
+  .timeline-container .vertical-scrollable-timeline .timeline-list:last-child::before {
+    left: 9px;
+  }
 }
