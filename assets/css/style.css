@@ -66,6 +66,10 @@
   margin-bottom: 0;
 }
 
+.timeline-list .buy--btn {
+  width: 45%;
+}
+
 .timeline-container .vertical-scrollable-timeline .timeline-list a {
   margin-bottom: 2rem;
   font-weight: 600;
@@ -161,21 +165,21 @@
 
 .typewriter span {
   text-transform: capitalize;
-  border-right: solid white 10px; 
+  border-right: solid white 10px;
   animation: cursor 1s ease-in-out infinite;
 }
 
 @keyframes cursor {
-  from { border-color: var(--text-color); }
-  to { border-color: transparent; }
+  from {
+    border-color: var(--text-color);
+  }
+
+  to {
+    border-color: transparent;
+  }
 }
 
-@media (max-width: 576px) {
-  .typewriter { font-size: 24px; }
-}
-@media (max-width: 768px) {
-  .typewriter { font-size: 36px; }
-}
+
 
 
 /* The typewriter cursor effect */
@@ -317,54 +321,8 @@ ol.gradient-list>.gradient-list-item::before {
   background: rgb(155, 0, 245);
 }
 
-@media (max-width: 992px) {
-  .header-body .header-body-text h2 {
-    font-size: 40px;
-  }
-  .typewriter span {
-    border-right: solid white 8px; 
-  }
-  .header-bar {
-    width: 20px;
-    height: 15px;
-}
-}
-@media (max-width: 756px) {
-  .utilites .cola-thumb {
-    text-align: center;
-    margin-bottom: 2rem !important;
-  }
-  .header-body .header-body-text h2 {
-    font-size: 30px;
-  }
-  .typewriter span {
-    border-right: solid white 6px; 
-  }
-  .utilites img {
-    width: 55%;
-  }
-  .header-section .header-wrapper .logo a img {
-    width: 60px;
-}
-}
-
-@media (max-width: 498px) {
-  .feature-details .feature-item .feature-thumb {
-    margin: 0 auto 1.5rem;
-  }
-
-  .feature-details .feature-item .feature-content h4 {
-    text-align: center;
-  }
-  .header-body .header-body-text h2 {
-    font-size: 20px;
-  }
-  .typewriter span {
-    border-right: solid white 4px; 
-  }
-  .header-section .header-wrapper .logo a img {
-    width: 45px;
-}
+.product_margin {
+  margin-left: auto;
 }
 
 .product {
@@ -376,7 +334,8 @@ ol.gradient-list>.gradient-list-item::before {
   border-radius: 6px;
 }
 
-.product__photo, .product__info {
+.product__photo,
+.product__info {
   width: 50%;
 }
 
@@ -432,53 +391,114 @@ ol.gradient-list>.gradient-list-item::before {
   width: 45%;
   text-align: center;
 }
-.buy--btn:hover{
+
+.buy--btn:hover {
   border: 1px solid #cac7f6;
   background: transparent;
 }
+
 @media (max-width: 992px) {
+  .header-body .header-body-text h2 {
+    font-size: 40px;
+  }
+
+  .typewriter span {
+    border-right: solid white 8px;
+  }
+
+  .product_margin {
+    margin-right: auto;
+  }
+
   .product {
     margin-top: 3rem;
   }
-  .product__photo, .product__info {
+
+  .product__photo,
+  .product__info {
     width: 100%;
   }
+
   .product__info {
     margin-left: 0px;
     padding: 0 2rem;
     margin-top: -30px;
   }
+
   .photo-container {
     text-align: center;
     left: 0rem;
     top: -5rem;
   }
+
   .photo-container img {
     width: 60%;
   }
+
   .title h1 {
     text-align: center;
   }
 }
-.button-4 {
-  text-transform: uppercase;
-  font-weight: 600;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-  color: #ffffff;
-  padding: 15px 45px;
-  background: -ms-linear-gradient(-65deg, #c165dd 0%, #1153fc 100%);
-  background: -moz-linear-gradient(-65deg, #c165dd 0%, #1153fc 100%);
-  background: -webkit-linear-gradient(-65deg, #c165dd 0%, #1153fc 100%);
+
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 36px;
+  }
 }
 
-.button-4:hover {
-  color: #ffffff;
-  box-shadow: 0px 17px 24px 0px rgba(18, 83, 252, 0.51);
+@media (max-width: 756px) {
+  .utilites .cola-thumb {
+    text-align: center;
+    margin-bottom: 2rem !important;
+  }
+
+  .header-body .header-body-text h2 {
+    font-size: 30px;
+  }
+
+  .typewriter span {
+    border-right: solid white 6px;
+  }
+
+  .utilites img {
+    width: 55%;
+  }
+
+  .header-section .header-wrapper .logo a img {
+    width: 60px;
+  }
 }
 
-.button-4.active {
-  background: transparent;
-  border: 1px solid #6e5dc6;
+@media (max-width: 576px) {
+  .typewriter {
+    font-size: 24px;
+  }
+  .buy--btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 498px) {
+  .feature-details .feature-item .feature-thumb {
+    margin: 0 auto 1.5rem;
+  }
+
+  .feature-details .feature-item .feature-content h4 {
+    text-align: center;
+  }
+
+  .header-body .header-body-text h2 {
+    font-size: 20px;
+  }
+
+  .typewriter span {
+    border-right: solid white 4px;
+  }
+
+  .header-section .header-wrapper .logo a img {
+    width: 45px;
+  }
+
 }

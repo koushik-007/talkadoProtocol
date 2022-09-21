@@ -451,6 +451,7 @@ html {
 body {
     padding: 0;
     margin: 0;
+    width: 100vw;
     font-size: 18px;
     color: white;
     line-height: 28px;
@@ -1707,7 +1708,7 @@ input[type="submit"] {
 
 /*Header Section Starts Here*/
 .header-section {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 999;
     top: 10px;
