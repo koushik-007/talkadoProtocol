@@ -143,13 +143,13 @@
 
 .header-body .header-body-text {
   position: absolute;
-  top: 25%;
+  top: 55%;
   width: 100%;
 
 }
 
 .header-body .header-body-text div {
-  width: 716px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -160,7 +160,7 @@
 }
 
 .typewriter span {
-  text-transform: uppercase;
+  text-transform: capitalize;
   border-right: solid white 10px; 
   animation: cursor 1s ease-in-out infinite;
 }
@@ -317,11 +317,7 @@ ol.gradient-list>.gradient-list-item::before {
   background: rgb(155, 0, 245);
 }
 
-@media (max-width: 767px) {
-  .header-body .header-body-text div {
-    width: 417px;
-  }
-}
+
 
 @media (max-width: 756px) {
   .utilites .cola-thumb {
@@ -343,14 +339,6 @@ ol.gradient-list>.gradient-list-item::before {
     text-align: center;
   }
 
-  .header-body .header-body-text div {
-    width: 211px;
-  }
-
-  .header-body .header-body-text div h2 {
-    font-size: 18px !important;
-    line-height: 30px;
-  }
 }
 
 .product {
