@@ -618,4 +618,7 @@ ol.gradient-list>.gradient-list-item::before {
   .timeline-container .vertical-scrollable-timeline .timeline-list:last-child::before {
     left: 9px;
   }
+  .address button {
+    letter-spacing: normal;
+  }
 }
