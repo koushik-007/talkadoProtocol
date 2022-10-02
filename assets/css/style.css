@@ -537,6 +537,9 @@ ol.gradient-list>.gradient-list-item::before {
 
 
 @media (max-width: 498px) {
+  .header-section {
+    padding: 5px 0;
+  }
   .feature-details .feature-item .feature-thumb {
     margin: 0 auto 1.5rem;
   }
@@ -554,7 +557,7 @@ ol.gradient-list>.gradient-list-item::before {
   }
 
   .header-section .header-wrapper .logo a img {
-    width: 45px;
+    width: 35px;
   }
 
   .timeline-container .vertical-scrollable-timeline .timeline-list {
