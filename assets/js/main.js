@@ -1,15 +1,15 @@
 (function ($) {
     "user strict";
     // Preloader Js
-    // $(window).on('load', function () {
-    //   $("[data-paroller-factor]").paroller();
-    //   $('.preloader').fadeOut(1000);
-    //   var img = $('.bg_img');
-    //   img.css('background-image', function () {
-    //     var bg = ('url(' + $(this).data('background') + ')');
-    //     return bg;
-    //   });
-    // });
+    $(window).on('load', function () {
+      $("[data-paroller-factor]").paroller();
+      $('.preloader').fadeOut(1000);
+      var img = $('.bg_img');
+      img.css('background-image', function () {
+        var bg = ('url(' + $(this).data('background') + ')');
+        return bg;
+      });
+    });
     $(document).ready(function () {
       // Nice Select
       $('.select-bar').niceSelect();
